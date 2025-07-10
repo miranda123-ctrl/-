@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마케팅 전략 시뮬레이션</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">마케팅 전략 시뮬레이터</a>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2 class="mb-4">시뮬레이션 입력</h2>
+        <form id="simulationForm">
+            <div class="mb-3">
+                <label for="targetCustomer" class="form-label">타겟 고객</label>
+                <input type="text" class="form-control" id="targetCustomer" placeholder="예: 20대 여성, 대학생, 직장인 등" required>
+            </div>
+            <div class="mb-3">
+                <label for="goal" class="form-label">목표</label>
+                <input type="text" class="form-control" id="goal" placeholder="예: 브랜드 인지도 30% 증가, 매출 20% 성장 등" required>
+            </div>
+            <div class="mb-3">
+                <label for="strategy" class="form-label">전략 (상세하게 작성 가능)</label>
+                <textarea class="form-control" id="strategy" rows="5" placeholder="마케팅 전략을 구체적으로 입력하세요" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">시뮬레이션 실행</button>
+        </form>
+
+        <div id="resultSection" class="mt-5" style="display:none;">
+            <h3>시뮬레이션 결과 리포트</h3>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">AI 예측 결과</h5>
+                    <p id="aiPrediction">예측 결과가 여기에 표시됩니다.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">성과 그래프</h5>
+                            <canvas id="resultChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">예상 손익</h5>
+                            <canvas id="profitChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
